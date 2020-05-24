@@ -1,8 +1,8 @@
 ## Two functions named "makeCacheMatrix" and "cacheSolve" are being 
 ## created to cache the inverse of a matrix
 
-## The makeCacheMatrix function creates an invertible square matrix
-## that can cache its inverse for the input
+## The makeCacheMatrix function creates a special matrix that can cache
+## its inverse for the input (invertible square matrix)
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
@@ -15,6 +15,9 @@ makeCacheMatrix <- function(x = matrix()) {
         getinv <- function() inv
         list(set=set, get=get, setinv=setinv, getinv=getinv)
 }
+
+## The cacheSolve function computes the inverse of the special matrix
+## returned by makeCacheMatrix
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
